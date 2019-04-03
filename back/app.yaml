@@ -1,0 +1,19 @@
+service: backend
+runtime: nodejs10
+
+# This sample incurs costs to run on the App Engine flexible environment.
+# The settings below are to reduce costs during testing and are not appropriate
+# for production use. For more information, see:
+# https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml
+
+env_variables:
+  GITHUB_ID: 'dbgfire'
+  GITHUB_OAUTH: '7b3dfede2953c4c0e2059ad5bece7cf73b80f5f2'
+  GITHUB_ORGA: 'zenika'
+
+#manual_scaling:
+#  instances: 1
+#resources:
+#  cpu: 1
+#  memory_gb: 0.5
+#  disk_size_gb: 10
