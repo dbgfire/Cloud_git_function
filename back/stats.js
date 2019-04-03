@@ -3,7 +3,7 @@
   const fs = require('fs')
   const path = require('path')
   const chalk = require('chalk')
-
+  // var orga= require('Organization.js');
   const githubOrganization = process.env.GITHUB_ORGA
   const members = JSON.parse(fs.readFileSync(path.join(__dirname, 'members.json')))
   const membersWithRepositories = members.filter(member => member.repositories.length > 0)
@@ -77,6 +77,15 @@
   Top languages:\r\n{blue ${topPrimaryLanguages.map(([language, count]) => `\t- ${language}: ${count}`).join('\r\n')}}
   Top ${githubOrganization} members repositories:\r\n{blue ${stargazersForMembersOwnedRepositories.map(([repo, count]) => `\t- ${repo}: ${count} ⭐️`).join('\r\n')}}
   `)
-
+  module.exports={
+    Organization:githubOrganization,
+    Members:members.length,
+    With_repositories:membersWithRepositories.length,
+    Organization_repositories:organizationRepositories.length,
+    Organization_top_languages:topPrimaryLanguagesInOrganization.map(([language, count]) => `\t- ${language}: ${count}`).join('\r\n'),
+    Organization_members_repositories: repositories.length,
+    Top_languages:topPrimaryLanguages.map(([language, count]) => `${language}: ${count}`),
+    Top_Organization_members_repositories:stargazersForMembersOwnedRepositories.map(([repo, count]) => `\t- ${repo}: ${count} ⭐️`).join('\r\n')
+  }
 })()
 

@@ -2150,7 +2150,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 164,
+      "totalCount": 168,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2219,7 +2219,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 3,
+      "totalCount": 4,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2441,7 +2441,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 6,
+      "totalCount": 8,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -3161,7 +3161,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 1,
+      "totalCount": 2,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -3229,7 +3229,7 @@
     "description": "The basic formation for the ethereum framework",
     "url": "https://github.com/Zenika/formation-ethereum-basics",
     "primaryLanguage": {
-      "name": "Shell",
+      "name": "JavaScript",
       "__typename": "Language"
     },
     "stargazers": {

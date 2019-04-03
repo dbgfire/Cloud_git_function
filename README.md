@@ -39,3 +39,7 @@ The following command allows you to get insights from the information
 yarn stats
 ```
 
+Start database
+```
+docker-compose -f stack.yml up
+```

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development node index.js",
+    "start": "NODE_ENV=development node app.js",
+    "recup": "NODE_ENV=development node index.js",
     "stats": "NODE_ENV=development node stats.js"
   },
   "license": "MIT",
@@ -15,7 +16,9 @@
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
     "httpie": "^1.1.0",
+    "mongoose": "latest",
     "node-fetch": "^2.3.0",
+    "dateformat": "latest",
     "progress": "^2.0.3",
     "yarn": "^1.13.0"
   }
