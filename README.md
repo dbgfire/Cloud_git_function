@@ -12,7 +12,7 @@ Install dependencies using `yarn`
 yarn
 ```
 
-# How to use in command line
+# How to use in command line 
 
 Create an `.env` file
 
