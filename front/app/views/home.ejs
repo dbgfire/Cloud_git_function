@@ -7,27 +7,48 @@
   </head>
   <body>
     <h1>Welcome to  <%=Organization%></h1>
-    Members : <%=Members%>
-    Membres avec au moins un dépôt : <%=With_repositories%>
+    Members : <%=Members%> 
+    Membres avec au moins un dépôt : <%=With_repositories%></br>
     Dépôts d'organisations : <%=Organization_repositories%>
     Dépôts des membres de l'organisation : <%=Organization_members_repositories%>
-    <%=Top_languages%>
+    <!-- <%=Top_languages.length%>
+    <%=Top_languages%> -->
     <canvas id="myChart" style="position: relative; height:40vh; width:80vw"></canvas>
     <script>
+            let topLangages ="<%= Top_languages%>"
+      topLangages=topLangages.split(',')
+      let topLangageTitle=[]
+      let topLangageScore=[]
+      for(var i=0;i<topLangages.length;i++){
+        var tmp=topLangages[i].split(':')
+        topLangageTitle.push(tmp[0])
+        topLangageScore.push(tmp[1])
+      }
       var ctx = document.getElementById('myChart').getContext('2d');
       var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'radar',
-
         // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: topLangageTitle,
             datasets: [{
-                label: "Langage utilisé",
+                label: "Langage utilisé sur les répertoires de l'organisation",
                 backgroundColor: 'rgb(0, 255, 132)',
                 borderColor: 'rgb(255, 0, 0)',
-                data: [0, 10, 5, 2, 20, 30, 45],
-            }]
+                data: topLangageScore,
+            },
+            {
+                label: "Langage utilisé sur les répertoires des membres de l'organisation",
+                fill:true,
+                backgroundColor:"rgba(54, 162, 235, 0.2)",
+                borderColor:"rgb(54, 162, 235)",
+                pointBackgroundColor:"rgb(54, 162, 235)",
+                pointBorderColor:"#fff",
+                pointHoverBackgroundColor:"#fff",
+                pointHoverBorderColor:"rgb(54, 162, 235)",
+                data: topLangageScore,
+            }
+          ]
         },
 
         // Configuration options go here
