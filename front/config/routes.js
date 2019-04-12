@@ -21,6 +21,19 @@ module.exports = function (app, passport) {
         failureRedirect: '/login', // redirect back to the signup page if there is an error
         failureFlash: true // allow flash messages
     }));
+    app.get('/auth/github',passport.authenticate('github'));
+    app.get('/login/github',passport.authenticate('github'));
+    app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }),
+    function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/home');
+    });
+    app.get('/return', 
+  passport.authenticate('github', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
+
 
 
 }

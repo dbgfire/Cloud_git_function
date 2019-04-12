@@ -1,10 +1,10 @@
 var express = require('express');
-
+const config = require('dotenv').config()
 var app = express();
 var multer = require('multer')
 var constants = require('constants');
 var constant = require('./config/constants');
-
+var GitHubStrategy = require('passport-github').Strategy;
 
 var port = process.env.PORT || 8042;
 var mongoose = require('mongoose');
@@ -53,6 +53,28 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+console.log(process.env.GITHUB_CLIENT_ID)
+passport.use(new GitHubStrategy({
+    clientID:process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    callbackURL: "http://127.0.0.1:"+port+"/auth/github/callback"
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    User.findOrCreate({ githubId: profile.id }, function (err, user) {
+      return cb(err, user);
+    });
+  }
+));
+
+passport.serializeUser(function(user, cb) {
+    cb(null, user);
+  });
+  
+  passport.deserializeUser(function(obj, cb) {
+    cb(null, obj);
+  });
+
+
 
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -65,6 +87,11 @@ require('./config/routes.js')(app, passport); // load our routes and pass in our
 //launch ======================================================================
 app.listen(port);
 console.log('port de app : ' + port);
+
+
+
+
+  
 
 //catch 404 and forward to error handler
 app.use(function (req, res, next) {
