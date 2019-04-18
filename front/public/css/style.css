@@ -68,7 +68,14 @@ img { max-width: 100%; }
 .btn-link-1.btn-link-1-twitter { background: #55acee; }
 .btn-link-1.btn-link-1-google-plus { background: #dd4b39; }
 .btn-link-1.btn-link-1-github { background: #000000; }
-
+#Language{
+	width: 60%;
+	height:60%;
+}
+#repo{
+	width:80%;
+	height:80%;
+}
 .btn-link-1 i {
 	padding-right: 5px;
 	vertical-align: middle;

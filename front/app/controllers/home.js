@@ -5,7 +5,7 @@ var request = require('request');
 
 exports.loggedIn = function(req, res, next)
 {
-	if (req.session.user) { // req.session.passport._id
+	if ( req.user ) { // req.session.passport._id
 
 		next();
 
@@ -26,15 +26,19 @@ exports.home = function(req, res) {
 		console.log(data.Top_languages)
 		console.log(data.Top_languages[0])
 		  res.render('home.ejs', {
+			user: req.user,
 			error : req.flash("error"),
 			success: req.flash("success"),
 			session:req.session,
 			Organization:data.Organization,
 			Members:data.Members,
 			With_repositories:data.With_repositories,
+			Organization_top_languages:data.Organization_top_languages,
 			Organization_repositories:data.Organization_repositories,
 			Organization_members_repositories:data.Organization_members_repositories,
-			Top_languages:data.Top_languages
+			Top_languages:data.Top_languages,
+			Top_languages_members:data.Top_languages
+
 
 		 });
 	});

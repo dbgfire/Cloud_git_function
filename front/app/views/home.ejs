@@ -6,16 +6,64 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   </head>
   <body>
+      Hello, <%= user.username %>
     <h1>Welcome to  <%=Organization%></h1>
     Members : <%=Members%> 
     Membres avec au moins un dépôt : <%=With_repositories%></br>
     Dépôts d'organisations : <%=Organization_repositories%>
     Dépôts des membres de l'organisation : <%=Organization_members_repositories%>
     <!-- <%=Top_languages.length%>
-    <%=Top_languages%> -->
-    <canvas id="myChart" style="position: relative; height:40vh; width:80vw"></canvas>
+    <%= Top_languages%>
+    <%=Organization_top_languages%> -->
+    <canvas id="Language" style="position: relative; height:40vh; width:80vw"></canvas>
+    <canvas id="repo" style="position: relative; height:40vh; width:80vw"></canvas>
+    
+<script>
+    var ctx = document.getElementById('repo').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'bar',
+      // The data for our dataset
+      data: {
+          labels: ['coblestone','java','rr'],
+          datasets: [
+            {
+              label: "Top des répertoires de l'organisation",
+              backgroundColor: 'rgb(0, 255, 132)',
+              borderColor: 'rgb(255, 0, 0)',
+              data: [0,1,3],
+          },
+          // {
+          //     label: "Langage utilisé sur les répertoires des membres de l'organisation",
+          //     fill:true,
+          //     backgroundColor:"rgba(54, 162, 235, 0.2)",
+          //     borderColor:"rgb(54, 162, 235)",
+          //     pointBackgroundColor:"rgb(54, 162, 235)",
+          //     pointBorderColor:"#fff",
+          //     pointHoverBackgroundColor:"#fff",
+          //     pointHoverBorderColor:"rgb(54, 162, 235)",
+          //     data: topLangageScore,
+          // }
+        ]
+      },
+
+      // Configuration options go here
+      options: {
+        responsive:true
+      }
+    });
+  </script>
+
     <script>
-            let topLangages ="<%= Top_languages%>"
+      let topLangagesOrganization ="<%=Organization_top_languages%>";
+      topLangagesOrganization=topLangagesOrganization.split(',')
+      let topLangageScoreOrganization=[]
+      for(var i=0;i<topLangagesOrganization.length;i++){
+        var tmp=topLangagesOrganization[i].split(':')
+        topLangageScoreOrganization.push(tmp[1])
+      }
+
+      let topLangages ="<%= Top_languages%>";
       topLangages=topLangages.split(',')
       let topLangageTitle=[]
       let topLangageScore=[]
@@ -24,18 +72,21 @@
         topLangageTitle.push(tmp[0])
         topLangageScore.push(tmp[1])
       }
-      var ctx = document.getElementById('myChart').getContext('2d');
+   
+
+      var ctx = document.getElementById('Language').getContext('2d');
       var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'radar',
         // The data for our dataset
         data: {
             labels: topLangageTitle,
-            datasets: [{
+            datasets: [
+              {
                 label: "Langage utilisé sur les répertoires de l'organisation",
                 backgroundColor: 'rgb(0, 255, 132)',
                 borderColor: 'rgb(255, 0, 0)',
-                data: topLangageScore,
+                data: topLangageScoreOrganization,
             },
             {
                 label: "Langage utilisé sur les répertoires des membres de l'organisation",

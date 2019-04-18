@@ -82,7 +82,7 @@
     Members:members.length,
     With_repositories:membersWithRepositories.length,
     Organization_repositories:organizationRepositories.length,
-    Organization_top_languages:topPrimaryLanguagesInOrganization.map(([language, count]) => ` "${language}": ${count}`).join('\r\n'),
+    Organization_top_languages:topPrimaryLanguagesInOrganization.map(([language, count]) => `${language}: ${count}`),
     Organization_members_repositories: repositories.length,
     Top_languages:topPrimaryLanguages.map(([language, count]) => `${language}: ${count}`),
     Top_Organization_members_repositories:stargazersForMembersOwnedRepositories.map(([repo, count]) => `\t- ${repo}: ${count} ⭐️`).join('\r\n')

@@ -1,10 +1,10 @@
 var express = require('express');
-const config = require('dotenv').config()
+require('dotenv').config()
 var app = express();
 var multer = require('multer')
 var constants = require('constants');
 var constant = require('./config/constants');
-var GitHubStrategy = require('passport-github').Strategy;
+var Strategy = require('passport-github').Strategy;
 
 var port = process.env.PORT || 8042;
 var mongoose = require('mongoose');
@@ -19,6 +19,26 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var dateFormat = require('dateformat');
 var now = new Date();
+
+passport.use(new Strategy({
+    clientID: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    callbackURL: '/return'
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    return cb(null, profile);
+  }));
+
+
+
+passport.serializeUser(function(user, cb) {
+  cb(null, user);
+});
+
+passport.deserializeUser(function(obj, cb) {
+  cb(null, obj);
+});
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -53,27 +73,6 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-console.log(process.env.GITHUB_CLIENT_ID)
-passport.use(new GitHubStrategy({
-    clientID:process.env.GITHUB_CLIENT_ID,
-    clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:"+port+"/auth/github/callback"
-  },
-  function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ githubId: profile.id }, function (err, user) {
-      return cb(err, user);
-    });
-  }
-));
-
-passport.serializeUser(function(user, cb) {
-    cb(null, user);
-  });
-  
-  passport.deserializeUser(function(obj, cb) {
-    cb(null, obj);
-  });
-
 
 
 app.use(passport.initialize());
@@ -87,9 +86,6 @@ require('./config/routes.js')(app, passport); // load our routes and pass in our
 //launch ======================================================================
 app.listen(port);
 console.log('port de app : ' + port);
-
-
-
 
   
 
