@@ -15,18 +15,21 @@
     Membres avec au moins un dépôt : <%=With_repositories%></br>
     Dépôts d'organisations : <%=Organization_repositories%>
     Dépôts des membres de l'organisation : <%=Organization_members_repositories%>
-    <!-- <%=Top_languages.length%>
-    <%= Top_languages%>
-    <%=Organization_top_languages%> -->
+    
+    <!-- graph -->
     <canvas id="Language" style="position: relative; height:40vh; width:80vw"></canvas>
     <canvas id="repo" style="position: relative; height:40vh; width:80vw"></canvas>
     
+
+
+
+
+
+
 <script>
     var ctx = document.getElementById('repo').getContext('2d');
     var chart = new Chart(ctx, {
-      // The type of chart we want to create
       type: 'bar',
-      // The data for our dataset
       data: {
           labels: ['coblestone','java','rr'],
           datasets: [
@@ -36,21 +39,8 @@
               borderColor: 'rgb(255, 0, 0)',
               data: [0,1,3],
           },
-          // {
-          //     label: "Langage utilisé sur les répertoires des membres de l'organisation",
-          //     fill:true,
-          //     backgroundColor:"rgba(54, 162, 235, 0.2)",
-          //     borderColor:"rgb(54, 162, 235)",
-          //     pointBackgroundColor:"rgb(54, 162, 235)",
-          //     pointBorderColor:"#fff",
-          //     pointHoverBackgroundColor:"#fff",
-          //     pointHoverBorderColor:"rgb(54, 162, 235)",
-          //     data: topLangageScore,
-          // }
         ]
       },
-
-      // Configuration options go here
       options: {
         responsive:true
       }
@@ -104,8 +94,6 @@
             }
           ]
         },
-
-        // Configuration options go here
         options: {
           responsive:true
         }

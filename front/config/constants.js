@@ -3,7 +3,7 @@ module.exports = {
         'project_name':'express-mvc-generator',
 	'adminname': 'Rajaram',
 	'adminmail': 'test@gmail.com',
-	'host':`${process.env.URL_BACK}`,
+	'host':`${process.env.HOST}`,
 	'email_smtp_host':'Your Email SMTP',
 	'email_smtp_port':'YOUR SMTP PORT',
 	"smtp_from_eamil":"from@email.com",
