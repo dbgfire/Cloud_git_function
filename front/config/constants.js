@@ -1,8 +1,9 @@
+require('dotenv').config()
 module.exports = {
         'project_name':'express-mvc-generator',
 	'adminname': 'Rajaram',
 	'adminmail': 'test@gmail.com',
-	'host':"http://localhost:8042",
+	'host':`${process.env.URL_BACK}`,
 	'email_smtp_host':'Your Email SMTP',
 	'email_smtp_port':'YOUR SMTP PORT',
 	"smtp_from_eamil":"from@email.com",
