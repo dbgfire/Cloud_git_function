@@ -5,6 +5,11 @@ runtime: nodejs10
 # for production use. For more information, see:
 # https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml
 
+env_variables:
+  GITHUB_CLIENT_ID: 'a48a808490c133165463'
+  GITHUB_CLIENT_SECRET: '4e6f1984b6a4b9b3baabae6c14966d621d4b4864'
+  URL_BACK: 'https://backend-dot-projetcloud20192a2l.appspot.com/'
+
 #manual_scaling:
 #  instances: 1
 #resources:
