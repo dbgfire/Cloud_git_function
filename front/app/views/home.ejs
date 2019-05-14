@@ -6,9 +6,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   </head>
   <body>
-      Hello, <%= user.username %>
-    <h1>Welcome to  <%=Organization%></h1>
-    Members : <%=Members%> 
+    <header>
+    Hello, <%= user.username %> 
+    <div class="social-login-buttons"><a class="btn btn-link-1"  href="/logout">logout</a></div>
+    </header>
+    <h1>Bienvenue sur les statiques de l'organisation  <%=Organization%></h1>
+    Nombre total de members : <%=Members%> 
     Membres avec au moins un dépôt : <%=With_repositories%></br>
     Dépôts d'organisations : <%=Organization_repositories%>
     Dépôts des membres de l'organisation : <%=Organization_members_repositories%>

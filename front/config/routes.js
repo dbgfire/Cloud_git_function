@@ -30,6 +30,9 @@ module.exports = function (app, passport) {
         res.redirect('/home');
         });
   
-
+    app.get('/logout', function(req, res){
+            req.logout();
+            res.redirect('/');
+    });
 
 }
