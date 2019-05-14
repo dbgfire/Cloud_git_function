@@ -23,7 +23,7 @@ var now = new Date();
 passport.use(new Strategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: '/return'
+    // callbackURL: '/return'
   },
   function(accessToken, refreshToken, profile, cb) {
     return cb(null, profile);

@@ -1,6 +1,3 @@
-var numeral = require('numeral');
-var bcrypt = require('bcrypt-nodejs');
-var dateFormat = require('dateformat');
 require('dotenv').config()
 var request = require('request');
 
