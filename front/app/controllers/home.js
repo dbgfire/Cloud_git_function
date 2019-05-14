@@ -1,6 +1,7 @@
 var numeral = require('numeral');
 var bcrypt = require('bcrypt-nodejs');
 var dateFormat = require('dateformat');
+require('dotenv').config()
 var request = require('request');
 
 exports.loggedIn = function(req, res, next)
@@ -18,7 +19,7 @@ exports.loggedIn = function(req, res, next)
 }
 
 exports.home = function(req, res) {
-	request('http://localhost:8040/stats', function (error, response, body) {
+	request(`${process.env.URL_BACK}/stats`, function (error, response, body) {
   		console.log('error:', error); // Print the error if one occurred
   		console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 		//console.log('body:', body); // Print the HTML for the Google homepage.
