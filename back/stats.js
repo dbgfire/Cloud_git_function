@@ -1,25 +1,28 @@
+
+
 (async function() {
   const config = require('dotenv').config()
+  var _ = require('lodash');
   const fs = require('fs')
   const path = require('path')
   const chalk = require('chalk')
+
   // var orga= require('Organization.js');
   const githubOrganization = process.env.GITHUB_ORGA
   const members = JSON.parse(fs.readFileSync(path.join(__dirname, 'members.json')))
   const membersWithRepositories = members.filter(member => member.repositories.length > 0)
-  const repositoriesOwnedByMembers = membersWithRepositories
+  const repositoriesOwnedByMembers =_.flatMap( membersWithRepositories
     .map(member => {
       member.repositories = member.repositories.filter(repository => repository.owner.login === member.login)
       return member
     })
-    .flatMap(member => member.repositories)
-
-  const repositories = members
-    .flatMap(member => member.repositories)
-  const primaryLanguages = repositories
-    .flatMap(repository => repository.primaryLanguage)
+    ,member => member.repositories);
+   
+  const repositories =  _.flatMap(members,member => member.repositories)
+  const primaryLanguages = _.flatMap(_.flatMap(repositories
+    ,repository => repository.primaryLanguage)
     .filter(primaryLanguage => primaryLanguage !== null)
-    .flatMap(primaryLanguage => primaryLanguage.name)
+    ,primaryLanguage => primaryLanguage.name)
     .reduce((acc, next) => {
       const index = acc.findIndex(([language]) => language === next)
       if (index === -1) {
@@ -30,7 +33,7 @@
       }
       return acc
     }, [])
-    .sort((a, b) => b[1] - a[1])
+    .sort((a, b) => b[1] - a[1]);
   const stargazersForMembersOwnedRepositories = repositoriesOwnedByMembers
     .reduce((acc, next) => {
       acc.push([`${next.name} (${next.owner.login})`, next.stargazers.totalCount])
@@ -42,10 +45,10 @@
   const topPrimaryLanguages = primaryLanguages.slice(0, 10)
 
   const organizationRepositories = JSON.parse(fs.readFileSync(path.join(__dirname, 'organization.json')))
-  const topPrimaryLanguagesInOrganization = organizationRepositories
-    .flatMap(repository => repository.primaryLanguage)
+  const topPrimaryLanguagesInOrganization = _.flatMap(_.flatMap(organizationRepositories
+    ,repository => repository.primaryLanguage)
     .filter(primaryLanguage => primaryLanguage !== null)
-    .flatMap(primaryLanguage => primaryLanguage.name)
+    ,primaryLanguage => primaryLanguage.name)
     .reduce((acc, next) => {
       const index = acc.findIndex(([language]) => language === next)
       if (index === -1) {
