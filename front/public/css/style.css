@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -14,7 +13,8 @@ body {
     font-weight: 300;
     color: #888;
     line-height: 30px;
-    text-align: center;
+	text-align: center;
+	box-sizing: border-box;
 }
 #myChart{
 	width: 50%;
@@ -37,10 +37,14 @@ h1, h2 {
     line-height: 50px;
 }
 
+.p-blue{
+	background: #73b8ee;
+}
+
 h3 {
 	font-size: 22px;
     font-weight: 300;
-    color: #555;
+    /* color: #555; */
     line-height: 30px;
 }
 
