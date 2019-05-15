@@ -26,7 +26,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 19,
+      "totalCount": 20,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -507,6 +507,42 @@
     "__typename": "Repository"
   },
   {
+    "name": "remindit",
+    "description": null,
+    "url": "https://github.com/Zenika/remindit",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "jarvis",
+    "description": null,
+    "url": "https://github.com/Zenika/jarvis",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 2,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
     "name": "nc-cd-decouverte",
     "description": "Zenika NightClazz Decouverte",
     "url": "https://github.com/Zenika/nc-cd-decouverte",
@@ -750,6 +786,24 @@
     },
     "stargazers": {
       "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "shootZup",
+    "description": null,
+    "url": "https://github.com/Zenika/shootZup",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -1257,6 +1311,96 @@
     "__typename": "Repository"
   },
   {
+    "name": "zenikaouest.github.io",
+    "description": null,
+    "url": "https://github.com/Zenika/zenikaouest.github.io",
+    "primaryLanguage": {
+      "name": "HTML",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "Democratie_Liquide",
+    "description": "Application de Vote par Démocratie Liquide",
+    "url": "https://github.com/Zenika/Democratie_Liquide",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "Democratie_Liquide_Front",
+    "description": "Democratie Liquide",
+    "url": "https://github.com/Zenika/Democratie_Liquide_Front",
+    "primaryLanguage": {
+      "name": "Vue",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 2,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "sensit-plot-data",
+    "description": null,
+    "url": "https://github.com/Zenika/sensit-plot-data",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "sensit-java-client",
+    "description": null,
+    "url": "https://github.com/Zenika/sensit-java-client",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
     "name": "Zenika-RPG",
     "description": null,
     "url": "https://github.com/Zenika/Zenika-RPG",
@@ -1266,6 +1410,60 @@
     },
     "stargazers": {
       "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "talk-continuous-delivery-app",
+    "description": null,
+    "url": "https://github.com/Zenika/talk-continuous-delivery-app",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "talk-continuous-delivery-tools",
+    "description": null,
+    "url": "https://github.com/Zenika/talk-continuous-delivery-tools",
+    "primaryLanguage": {
+      "name": "Shell",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 8,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "PhotoBooZ",
+    "description": null,
+    "url": "https://github.com/Zenika/PhotoBooZ",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -1457,7 +1655,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 8,
+      "totalCount": 10,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -1475,7 +1673,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 6,
+      "totalCount": 7,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -1566,6 +1764,24 @@
     },
     "stargazers": {
       "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "jmjar-hero",
+    "description": "Repository pour le jeu jeanMichel.jar Hero",
+    "url": "https://github.com/Zenika/jmjar-hero",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -1689,24 +1905,6 @@
     },
     "stargazers": {
       "totalCount": 5,
-      "__typename": "StargazerConnection"
-    },
-    "owner": {
-      "login": "Zenika",
-      "__typename": "Organization"
-    },
-    "__typename": "Repository"
-  },
-  {
-    "name": "immutadot",
-    "description": "immutad●t (pronounced immutadot) is a JavaScript library to deal with nested immutable structures.",
-    "url": "https://github.com/Zenika/immutadot",
-    "primaryLanguage": {
-      "name": "JavaScript",
-      "__typename": "Language"
-    },
-    "stargazers": {
-      "totalCount": 154,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2150,7 +2348,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 168,
+      "totalCount": 212,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2219,7 +2417,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 4,
+      "totalCount": 6,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2268,7 +2466,10 @@
     "name": "alpine-jenkins-with-docker",
     "description": "Minimal Jenkins Docker Images built on Alpine Linux",
     "url": "https://github.com/Zenika/alpine-jenkins-with-docker",
-    "primaryLanguage": null,
+    "primaryLanguage": {
+      "name": "Dockerfile",
+      "__typename": "Language"
+    },
     "stargazers": {
       "totalCount": 2,
       "__typename": "StargazerConnection"
@@ -2441,7 +2642,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 8,
+      "totalCount": 15,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2460,24 +2661,6 @@
     },
     "stargazers": {
       "totalCount": 0,
-      "__typename": "StargazerConnection"
-    },
-    "owner": {
-      "login": "Zenika",
-      "__typename": "Organization"
-    },
-    "__typename": "Repository"
-  },
-  {
-    "name": "FAQ",
-    "description": "Internal Knowledge Database for your organization",
-    "url": "https://github.com/Zenika/FAQ",
-    "primaryLanguage": {
-      "name": "JavaScript",
-      "__typename": "Language"
-    },
-    "stargazers": {
-      "totalCount": 16,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2657,7 +2840,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 8,
+      "totalCount": 9,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2795,7 +2978,7 @@
     "url": "https://github.com/Zenika/code-moi-un-mouton",
     "primaryLanguage": null,
     "stargazers": {
-      "totalCount": 6,
+      "totalCount": 7,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2813,7 +2996,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 12,
+      "totalCount": 13,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2831,7 +3014,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 6,
+      "totalCount": 8,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2842,14 +3025,14 @@
   },
   {
     "name": "adoc-presentation-model",
-    "description": "A full AsciiDoctor/Maven extended example generating both HTML PDF and Reveal.js slides",
+    "description": "A full AsciiDoc/Maven extended example generating both HTML PDF and Reveal.js slides",
     "url": "https://github.com/Zenika/adoc-presentation-model",
     "primaryLanguage": {
       "name": "JavaScript",
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 0,
+      "totalCount": 1,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2954,7 +3137,7 @@
     "url": "https://github.com/Zenika/MarZ",
     "primaryLanguage": null,
     "stargazers": {
-      "totalCount": 5,
+      "totalCount": 4,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2969,6 +3152,24 @@
     "url": "https://github.com/Zenika/academy-data",
     "primaryLanguage": {
       "name": "TeX",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "wanton-template",
+    "description": null,
+    "url": "https://github.com/Zenika/wanton-template",
+    "primaryLanguage": {
+      "name": "JavaScript",
       "__typename": "Language"
     },
     "stargazers": {
@@ -3207,24 +3408,6 @@
     "__typename": "Repository"
   },
   {
-    "name": "zenika.ca",
-    "description": "Zenika Canada website",
-    "url": "https://github.com/Zenika/zenika.ca",
-    "primaryLanguage": {
-      "name": "Vue",
-      "__typename": "Language"
-    },
-    "stargazers": {
-      "totalCount": 0,
-      "__typename": "StargazerConnection"
-    },
-    "owner": {
-      "login": "Zenika",
-      "__typename": "Organization"
-    },
-    "__typename": "Repository"
-  },
-  {
     "name": "formation-ethereum-basics",
     "description": "The basic formation for the ethereum framework",
     "url": "https://github.com/Zenika/formation-ethereum-basics",
@@ -3298,10 +3481,316 @@
   },
   {
     "name": "github-insights",
-    "description": "GitHub Insights",
+    "description": "GitHub Insights for organization",
     "url": "https://github.com/Zenika/github-insights",
     "primaryLanguage": {
       "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 2,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-java-tp-3",
+    "description": "Implémentez la suite de Fibonacci",
+    "url": "https://github.com/Zenika/decathlon-coding-school-java-tp-3",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-java-tp-4",
+    "description": "Est-ce que vous me voyez ?",
+    "url": "https://github.com/Zenika/decathlon-coding-school-java-tp-4",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-java-tp-5",
+    "description": "Un peu d'abstraction ...",
+    "url": "https://github.com/Zenika/decathlon-coding-school-java-tp-5",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-java-tp-6",
+    "description": "Héritage vs Composition",
+    "url": "https://github.com/Zenika/decathlon-coding-school-java-tp-6",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-java-tp-7",
+    "description": null,
+    "url": "https://github.com/Zenika/decathlon-coding-school-java-tp-7",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "dms-relations-and-schema-stiching-poc",
+    "description": "POC to demonstrate schema stiching schemas that have relations",
+    "url": "https://github.com/Zenika/dms-relations-and-schema-stiching-poc",
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-java-tp-12",
+    "description": "Un serveur HTTP",
+    "url": "https://github.com/Zenika/decathlon-coding-school-java-tp-12",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "zba-iot",
+    "description": "Android things repository for zba project",
+    "url": "https://github.com/Zenika/zba-iot",
+    "primaryLanguage": {
+      "name": "Kotlin",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "zba-sensor",
+    "description": "Arduino boad to connect to rasberry from zba-iot project",
+    "url": "https://github.com/Zenika/zba-sensor",
+    "primaryLanguage": {
+      "name": "C++",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "decathlon-coding-school-spring",
+    "description": "Formation Spring pour Decathlon",
+    "url": "https://github.com/Zenika/decathlon-coding-school-spring",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 2,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "zba-measurement",
+    "description": "service to connect zba-iot to influxDb",
+    "url": "https://github.com/Zenika/zba-measurement",
+    "primaryLanguage": {
+      "name": "Java",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "js-project-checklist",
+    "description": "Checklist to browse before starting a JS project",
+    "url": "https://github.com/Zenika/js-project-checklist",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "scan-and-give",
+    "description": "Scan your QR code and make a donation",
+    "url": "https://github.com/Zenika/scan-and-give",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "__typename": "Language"
+    },
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "marcel-plugin-open-weather",
+    "description": "An open weather plugin for MARCEL",
+    "url": "https://github.com/Zenika/marcel-plugin-open-weather",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "dms-employee-poc",
+    "description": "Part of a POC for automatic schema stitching for Zenika's DMS and more especialy the gateway",
+    "url": "https://github.com/Zenika/dms-employee-poc",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "dms-vote-poc",
+    "description": "Part of a POC for automatic schema stitching for Zenika's DMS and more especialy the gateway",
+    "url": "https://github.com/Zenika/dms-vote-poc",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "setup-video",
+    "description": "Doc pour l'installation du setup Vidéo",
+    "url": "https://github.com/Zenika/setup-video",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 0,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "Z-iHub",
+    "description": "Face recognition library for companies and developers",
+    "url": "https://github.com/Zenika/Z-iHub",
+    "primaryLanguage": {
+      "name": "Python",
       "__typename": "Language"
     },
     "stargazers": {
