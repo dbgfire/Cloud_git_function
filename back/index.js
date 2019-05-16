@@ -71,7 +71,7 @@
   }
 
   fs.writeFileSync(path.join(__dirname, 'members.json'), JSON.stringify(members, undefined, 2))
-  console.log('Members in error', JSON.stringify(membersInError, undefined, 2))
+  // console.log('Members in error', JSON.stringify(membersInError, undefined, 2))
 
   const organization = await getOrganizationRepositories(githubOrganization)
   fs.writeFileSync(path.join(__dirname, 'organization.json'), JSON.stringify(organization, undefined, 2))
