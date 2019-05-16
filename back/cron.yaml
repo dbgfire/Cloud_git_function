@@ -1,0 +1,4 @@
+cron:
+- description: "Update data"
+  url: /tasks/summary
+  schedule: every 24 hours

@@ -1,5 +1,6 @@
 var express = require('express');
 var stats = require('./stats.js');
+var update = require('./index')
 var app = express();
 var port = process.env.PORT || 8040;
 
@@ -94,6 +95,9 @@ app.get('/stats',function (req, res) {
 
 //     });  
 // })
+app.get('/update',function (req, res) {
+  res.send(`update en cours: ${update}`);
+});
 
 app.route('/').all(function(req,res){ 
     res.json({message : "Bienvenue sur notre  API ", methode : req.method});

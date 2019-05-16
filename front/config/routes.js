@@ -34,5 +34,5 @@ module.exports = function (app, passport) {
             req.logout();
             res.redirect('/');
     });
-
+    app.get('/info',function(req, res){res.render('info.ejs')});
 }
