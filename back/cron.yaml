@@ -1,4 +1,4 @@
 cron:
 - description: "Update data"
-  url: /tasks/summary
+  url: /update
   schedule: every 24 hours
