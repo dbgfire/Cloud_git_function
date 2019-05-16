@@ -2348,7 +2348,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 212,
+      "totalCount": 216,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2964,21 +2964,6 @@
     },
     "stargazers": {
       "totalCount": 1,
-      "__typename": "StargazerConnection"
-    },
-    "owner": {
-      "login": "Zenika",
-      "__typename": "Organization"
-    },
-    "__typename": "Repository"
-  },
-  {
-    "name": "code-moi-un-mouton",
-    "description": "Partage de documentations et ressources utiles",
-    "url": "https://github.com/Zenika/code-moi-un-mouton",
-    "primaryLanguage": null,
-    "stargazers": {
-      "totalCount": 7,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -3795,6 +3780,21 @@
     },
     "stargazers": {
       "totalCount": 1,
+      "__typename": "StargazerConnection"
+    },
+    "owner": {
+      "login": "Zenika",
+      "__typename": "Organization"
+    },
+    "__typename": "Repository"
+  },
+  {
+    "name": "terraform-azure-cli",
+    "description": "Container image including Azure and Terraform CLI, build with Docker",
+    "url": "https://github.com/Zenika/terraform-azure-cli",
+    "primaryLanguage": null,
+    "stargazers": {
+      "totalCount": 0,
       "__typename": "StargazerConnection"
     },
     "owner": {
