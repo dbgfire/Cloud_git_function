@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>GitCloudStats</title>
     <meta charset="UTF-8">
@@ -10,140 +11,156 @@
     <link rel='stylesheet' href='/css/style.css' />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   </head>
-  
+
   <style>
-    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    </style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+
+  </style>
+
   <body>
     <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
       <span class="w3-bar-item w3-left">Hello, <%= user.username %> </span>
-      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+          class="fa fa-bars"></i>  Menu</button>
       <span class="w3-bar-item w3-right">GitCloudStats</span>
-      <div class="w3-bar-item w3-right"><a class="btn btn-link-1"  href="/logout">logout</a></div>
+      <div class="w3-bar-item w3-right"><a class="btn btn-link-1" href="/logout">logout</a></div>
     </div>
     <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-light-grey" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <hr>
-  <div class="w3-container">
-    <h5>Dashboard</h5>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
-  </div>
-</nav>
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-<div class="w3-main" style="margin-left:300px;margin-top:43px;">
-    <!-- Header -->
-    <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-dashboard"></i>Bienvenue sur les statiques de l'organisation  <%=Organization%></b></h5>
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-light-grey" style="z-index:3;width:300px;"
+      id="mySidebar"><br>
+      <hr>
+      <div class="w3-container">
+        <h5>Dashboard</h5>
+      </div>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+          onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+      </div>
+    </nav>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+      title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+      <!-- Header -->
+      <header class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-dashboard"></i>Bienvenue sur les statiques de l'organisation <%=Organization%></b></h5>
       </header>
       <div class="w3-row-padding w3-margin-bottom">
-          <div class="w3-quarter">
-            <div class="w3-container w3-red w3-padding-16">
-              <div class="w3-left">
-                <img src="/img/orga.png" alt="Icons made by Freepik from www.flaticon.com</a> is licensed by CC 3.0 BY">
-              </div>
-              <div class="w3-right">
-                <h3><%=Members%> </h3>
-              </div>
-              <div class="w3-clear"></div>
-              <h4>Nombre total de members</h4>
+        <div class="w3-quarter">
+          <div class="w3-container w3-red w3-padding-16">
+            <div class="w3-left">
+              <img src="/img/orga.png" alt="Icons made by Freepik from www.flaticon.com</a> is licensed by CC 3.0 BY">
             </div>
+            <div class="w3-right">
+              <h3><%=Members%> </h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>Nombre total de members</h4>
           </div>
-          <div class="w3-quarter">
-              <div class="w3-container w3-blue w3-padding-16">
-                <div class="w3-left">
-                  <img src="/img/repoUser.png" alt="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY">
-                </div>
-                <div class="w3-right">
-                  <h3><%=Organization_members_repositories%></h3>
-                </div>
-                <div class="w3-clear"></div>
-                <h4>Dépôts des membres </h4>
-              </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-blue w3-padding-16">
+            <div class="w3-left">
+              <img src="/img/repoUser.png" alt="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY">
             </div>
-            <div class="w3-quarter">
-              <div class="w3-container w3-teal w3-padding-16">
-                <div class="w3-left"><img src="/img/folder.png" alt="Icons made by Smashicons www.flaticon.com is licensed by CC 3.0 BY"></div>
-                <div class="w3-right">
-                  <h3><%=Organization_repositories%></h3>
-                </div>
-                <div class="w3-clear"></div>
-                <h4>Dépôts d'organisations</h4>
-              </div>
+            <div class="w3-right">
+              <h3><%=Organization_members_repositories%></h3>
             </div>
-            <div class="w3-quarter">
-              <div class="w3-container w3-orange w3-text-white w3-padding-16">
-                <div class="w3-left"><img src="/img/folders.png" alt="Icons made by Freepik www.flaticon.com is licensed by CC 3.0 BY"></div>
-                <div class="w3-right">
-                  <h3><%=With_repositories%></h3>
-                </div>
-                <div class="w3-clear"></div>
-                <h4> Membres avec au moins un dépôt</h4>
-              </div>
-            </div>
+            <div class="w3-clear"></div>
+            <h4>Dépôts des membres </h4>
           </div>
-        
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-teal w3-padding-16">
+            <div class="w3-left"><img src="/img/folder.png"
+                alt="Icons made by Smashicons www.flaticon.com is licensed by CC 3.0 BY"></div>
+            <div class="w3-right">
+              <h3><%=Organization_repositories%></h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>Dépôts d'organisations</h4>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-orange w3-text-white w3-padding-16">
+            <div class="w3-left"><img src="/img/folders.png"
+                alt="Icons made by Freepik www.flaticon.com is licensed by CC 3.0 BY"></div>
+            <div class="w3-right">
+              <h3><%=With_repositories%></h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4> Membres avec au moins un dépôt</h4>
+          </div>
+        </div>
+      </div>
 
-    <!-- graph -->
-    <canvas id="Language" style="position: relative; height:40vh; width:80vw"></canvas>
-    <canvas id="repo" style="position: relative; height:40vh; width:80vw"></canvas>
-</div>
+
+      <!-- graph -->
+      <canvas id="Language" style="position: relative; height:40vh; width:80vw"></canvas>
+      <canvas id="repo" style="position: relative; height:40vh; width:80vw"></canvas>
+    </div>
 
 
 
 
 
 
-<script>
-    var ctx = document.getElementById('repo').getContext('2d');
-    var chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-          labels: ['coblestone','java','rr'],
+    <script>
+      var ctx = document.getElementById('repo').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['coblestone', 'java', 'rr'],
           datasets: [
             {
               label: "Top des répertoires de l'organisation",
               backgroundColor: 'rgb(0, 255, 132)',
               borderColor: 'rgb(255, 0, 0)',
-              data: [0,1,3],
-          },
-        ]
-      },
-      options: {
-        responsive:true
-      }
-    });
-  </script>
+              data: [0, 1, 3],
+            },
+          ]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    </script>
 
     <script>
-      let topLangagesOrganization ="<%=Organization_top_languages%>";
-      topLangagesOrganization=topLangagesOrganization.split(',')
-      let topLangageScoreOrganization=[]
-      for(var i=0;i<topLangagesOrganization.length;i++){
-        var tmp=topLangagesOrganization[i].split(':')
+      let topLangagesOrganization = "<%=Organization_top_languages%>";
+      topLangagesOrganization = topLangagesOrganization.split(',')
+      let topLangageScoreOrganization = []
+      for (var i = 0; i < topLangagesOrganization.length; i++) {
+        var tmp = topLangagesOrganization[i].split(':')
         topLangageScoreOrganization.push(tmp[1])
       }
 
-      let topLangages ="<%= Top_languages%>";
-      topLangages=topLangages.split(',')
-      let topLangageTitle=[]
-      let topLangageScore=[]
-      for(var i=0;i<topLangages.length;i++){
-        var tmp=topLangages[i].split(':')
+      let topLangages = "<%= Top_languages%>";
+      topLangages = topLangages.split(',')
+      let topLangageTitle = []
+      let topLangageScore = []
+      for (var i = 0; i < topLangages.length; i++) {
+        var tmp = topLangages[i].split(':')
         topLangageTitle.push(tmp[0])
         topLangageScore.push(tmp[1])
       }
-   
+
 
       var ctx = document.getElementById('Language').getContext('2d');
       var chart = new Chart(ctx, {
@@ -151,32 +168,33 @@
         type: 'radar',
         // The data for our dataset
         data: {
-            labels: topLangageTitle,
-            datasets: [
-              {
-                label: "Langage utilisé sur les répertoires de l'organisation",
-                backgroundColor: 'rgb(0, 255, 132)',
-                borderColor: 'rgb(255, 0, 0)',
-                data: topLangageScoreOrganization,
+          labels: topLangageTitle,
+          datasets: [
+            {
+              label: "Langage utilisé sur les répertoires de l'organisation",
+              backgroundColor: 'rgb(0, 255, 132)',
+              borderColor: 'rgb(255, 0, 0)',
+              data: topLangageScoreOrganization,
             },
             {
-                label: "Langage utilisé sur les répertoires des membres de l'organisation",
-                fill:true,
-                backgroundColor:"rgba(54, 162, 235, 0.2)",
-                borderColor:"rgb(54, 162, 235)",
-                pointBackgroundColor:"rgb(54, 162, 235)",
-                pointBorderColor:"#fff",
-                pointHoverBackgroundColor:"#fff",
-                pointHoverBorderColor:"rgb(54, 162, 235)",
-                data: topLangageScore,
+              label: "Langage utilisé sur les répertoires des membres de l'organisation",
+              fill: true,
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              borderColor: "rgb(54, 162, 235)",
+              pointBackgroundColor: "rgb(54, 162, 235)",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgb(54, 162, 235)",
+              data: topLangageScore,
             }
           ]
         },
         options: {
-          responsive:true
+          responsive: true
         }
       });
     </script>
-  
+
   </body>
+
 </html>
