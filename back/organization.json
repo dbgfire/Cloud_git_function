@@ -2348,7 +2348,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 216,
+      "totalCount": 219,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2642,7 +2642,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 15,
+      "totalCount": 16,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -2804,7 +2804,7 @@
       "__typename": "Language"
     },
     "stargazers": {
-      "totalCount": 3,
+      "totalCount": 4,
       "__typename": "StargazerConnection"
     },
     "owner": {
@@ -3790,9 +3790,12 @@
   },
   {
     "name": "terraform-azure-cli",
-    "description": "Container image including Azure and Terraform CLI, build with Docker",
+    "description": "Minimalist & lightweight docker image including Azure and Terraform CLI",
     "url": "https://github.com/Zenika/terraform-azure-cli",
-    "primaryLanguage": null,
+    "primaryLanguage": {
+      "name": "Dockerfile",
+      "__typename": "Language"
+    },
     "stargazers": {
       "totalCount": 0,
       "__typename": "StargazerConnection"

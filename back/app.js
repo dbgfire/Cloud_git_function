@@ -96,7 +96,7 @@ app.get('/stats',function (req, res) {
 //     });  
 // })
 app.get('/update',function (req, res) {
-  res.send(`update en cours: ${update}`);
+  res.status(202).json(update);
 });
 
 app.route('/').all(function(req,res){ 
